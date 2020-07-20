@@ -67,7 +67,7 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-console.log('app.jsx is running');
+console.log('app.jsx is running!!!');
 
 
 /***/ })
