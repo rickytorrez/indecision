@@ -10,4 +10,15 @@ module.exports = {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
   },
+  // lets you set up an array of rules
+  module: {
+    rules: [
+      {
+        loader: 'babel-loader',
+        // work on files that end on .jsx
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+      },
+    ],
+  },
 };
