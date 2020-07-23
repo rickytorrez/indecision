@@ -1,4 +1,5 @@
 // json file that allos us to pass all the args in the command line and place them here
 {
-  "presets": ["env", "react"]
+  "presets": ["env", "react"],
+  "plugins": ["transform-class-properties"]
 }
