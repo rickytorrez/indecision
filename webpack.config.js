@@ -19,6 +19,12 @@ module.exports = {
         test: /\.jsx$/,
         exclude: /node_modules/,
       },
+      {
+        // work on files that end on .css
+        test: /\.s?css$/,
+        // use allows us provide an array of loaders
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
     ],
   },
   devtool: 'cheap-module-eval-source-map',
