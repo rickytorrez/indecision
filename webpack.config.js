@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   // entry point is
-  entry: './src/App.jsx',
+  entry: './src/playground/redux-101.jsx',
 
   // output bundle file
   output: {
