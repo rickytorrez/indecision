@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   // entry point is
-  entry: './src/playground/destructuring.jsx',
+  entry: './src/playground/redux-expensify.jsx',
 
   // output bundle file
   output: {
