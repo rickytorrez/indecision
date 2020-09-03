@@ -131,7 +131,9 @@ const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
       typeof startDate !== 'number' || expense.createdAt >= startDate; // only if start date is a number, we want to filter expenses
     const endDateMatch =
       typeof endDate !== 'number' || expense.createdAt <= endDate;
-    const textMatch = true;
+    const textMatch = expense.description
+      .toLowerCase()
+      .includes(text.toLowerCase());
 
     return startDateMatch && endDateMatch && textMatch;
   });
@@ -162,15 +164,15 @@ const expenseTwo = store.dispatch(
 // store.dispatch(removeExpense({ id: expenseOne.expense.id }));
 // store.dispatch(editExpense(expenseTwo.expense.id, { amount: 500 }));
 
-// store.dispatch(setTextFilter('rent'));
+store.dispatch(setTextFilter('t'));
 // store.dispatch(setTextFilter(''));
 
 // store.dispatch(sortByAmount());
 // store.dispatch(sortByDate());
 
-store.dispatch(setStartDate(0));
+// store.dispatch(setStartDate(0));
 // store.dispatch(setStartDate());
-store.dispatch(setEndDate(999));
+// store.dispatch(setEndDate(999));
 
 const demoState = {
   expenses: [
