@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   // entry point is
-  entry: './src/playground/redux-expensify.jsx',
+  entry: './src/playground/hoc.jsx',
 
   // output bundle file
   output: {
